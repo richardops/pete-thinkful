@@ -1,46 +1,41 @@
-/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet. You don't have to edit this line.*/
+/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 body {
+  background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
-  padding-left: 475px;
-  padding-right: 475px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #eae2b7;
+  padding: 40px;
 }
 
-/* Set the font family for any h1, h2, or h3 heading */
-
-/* main element styling */
-.header {text-align: center;}
-.footer {text-align: center;}
+/* Headings */
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", Times, serif; text-align: center;
-}
-
-h1 {text-align: center;
-  display: block;
-  margin: 0 auto;}
-
-h2 {font-size: 25px;
+  font-family: "Playfair Display", Times, serif;
   text-align: center;
-  display: block;
-  margin: 0 auto;}
-
-h3 {font-size: 16px;}
-
-h4 {text-align: center;
-  display: block;
-  margin: 0 auto}
-
-nav {text-align: center;
 }
 
-img { display: block; margin: 0 auto;}
+/* Header */
+header {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Containers */
+.div {
+  background-color: #eae2b7;
+  margin: auto;
+  width: 600px;
+}
 
 article {
   padding: 50px 0;
@@ -51,34 +46,188 @@ article div {
   width: 100%;
 }
 
+/* Paragraphs */
 p {
-  line-height: 1.5; text-align: left;
+  line-height: 1.5;
 }
 
-li {text-align: left;}
-
+/* Links */
 a:link {color: #d62828;}
+
 a:visited {color: #00bfff	;}
+
 a:hover {color: #f77f00;}
+
 a:active {color: #eae2b7;}
 
-/* The div container constrains the content width within the main container to 600px */
-div {
-  margin: auto;
-  width: 600px;
+nav a {
+  padding-left: 20px;
 }
 
+/* Images */
 img {
   width: 100%;
   max-width: 200px;
   height: auto;
 }
 
-hr {
-  border: 1px solid black;
+.image-circle {
+  border: 2px solid #003049;
+  border-radius: 50%;
 }
 
-/* Add your solution below */
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Center the image and text as a group */
+  align-items: center; /* Align them vertically */
+  gap: 50px; /* Space between the image and text */
+  max-width: 1000px; /* Set a maximum width for the section */
+  margin: 0 auto; /* Center the section on the page */
+  padding: 20px 0;
+  text-align: center; /* Ensure text inside this section is centered */
+  position: relative; /* Required for absolute positioning */
+  left: 30px; /* Move the entire section to the right */
+}
 
-.image-circle {border-radius: 50%; border: 2px solid #003049;
+.about-section img {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  max-width: 200px; /* Set a consistent image size */
+}
+
+.about-pete {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: 15px; /* Even spacing between text elements */
+  max-width: 600px; /* Ensure text content doesn't stretch too wide */
+}
+
+.about-pete h3, 
+.about-pete p, 
+.about-pete ul {
+  margin: 0; /* Remove default margins */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure text block width is consistent */
+}
+
+.about-pete ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.about-pete ul li {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+h2 {
+  text-align: center; /* Center the "About" heading */
+  margin-bottom: 20px; /* Add space below the h2 */
+}
+
+/* Pete's Background Section */
+.petes-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content within this section */
+  align-items: center; /* Center the content horizontally */
+  max-width: 800px;
+  margin: 20px auto; /* Center the entire section */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.petes-background h3,
+.petes-background p {
+  margin: 10px 0;
+  width: 100%; /* Ensure text block width is consistent */
+}
+
+/* Portfolio Section */
+#portfolio {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#portfolio h2 {
+  margin-bottom: 30px;
+}
+
+/* Flexbox for displaying projects in a single row */
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness, wraps if needed */
+  justify-content: center; /* Centers the project items */
+  gap: 20px; /* Adjust spacing between project items */
+}
+
+/* Individual project styling */
+.portfolio-projects .project {
+  width: 30%; /* Adjust width to control size of the project */
+  max-width: 300px;
+  padding: 0; /* Remove padding */
+  text-align: center;
+}
+
+/* Project images */
+.portfolio-projects img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Project description with smaller font */
+.portfolio-projects p {
+  font-size: 14px; /* Set font size for project descriptions */
+  line-height: 1.4;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Flexbox for centering the contact items */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the list horizontally */
+  gap: 20px; /* Spacing between the contact items */
+  flex-wrap: wrap; /* Ensures it wraps if needed on small screens */
+  list-style-type: numbers; /* Removes bullet points */
+  padding: 0;
+  list-style-position: inside;
+}
+
+.contact-list li {
+  font-size: 16px;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: #003049;
+  font-weight: bold;
+}
+
+.contact-list a:link {color: #d62828;}
+
+.contact-list a:visited {color: #00bfff	;}
+
+.contact-list a:hover {color: #f77f00;}
+
+.contact-list a:active {color: #eae2b7;}
+
+
+/* Footer */
+footer {
+  text-align: center;
+}
+
+/* Other page elements */
+hr {
+  border: 1px solid black;
 }
